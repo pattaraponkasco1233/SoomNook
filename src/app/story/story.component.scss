@@ -1,0 +1,48 @@
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.title::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f7b6b0, #ffd6cc);
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  color: rgba(77, 59, 47, 0.8);
+}
+
+.story-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.story-card {
+  background: rgba(255, 246, 239, 0.8);
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.story-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

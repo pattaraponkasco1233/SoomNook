@@ -1,0 +1,112 @@
+.hero {
+  text-align: center;
+  background: linear-gradient(160deg, #fff1ec 0%, #fffdfb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+// .hero::after {
+//   content: '';
+//   position: absolute;
+//   inset: auto -40px -60px;
+//   height: 120px;
+//   background: radial-gradient(circle, rgba(247, 182, 176, 0.4), transparent 70%);
+// }
+
+.tagline {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(77, 59, 47, 0.7);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(77, 59, 47, 0.8);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: #f7b6b0;
+  color: #2f2a24;
+  box-shadow: 0 10px 24px rgba(245, 123, 136, 0.3);
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: rgba(77, 59, 47, 0.2);
+  color: var(--espresso);
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+  margin-top: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quick-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(247, 182, 176, 0.4);
+  color: var(--espresso);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 182, 176, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.quick-links a:hover {
+  border-color: #f7b6b0;
+  background: rgba(247, 182, 176, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(247, 182, 176, 0.2);
+}
+
+.quick-links a:hover::before {
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

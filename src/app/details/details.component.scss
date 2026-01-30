@@ -1,0 +1,39 @@
+.details-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.detail {
+  background: rgba(200, 214, 192, 0.2);
+  border-radius: 16px;
+  padding: 1.1rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(77, 59, 47, 0.2);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .location {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

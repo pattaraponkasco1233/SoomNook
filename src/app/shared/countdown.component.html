@@ -1,0 +1,20 @@
+<div class="countdown" aria-live="polite">
+    @if (remaining(); as time) {
+    <div class="unit">
+        <span class="value">{{ time.days }}</span>
+        <span class="label">วัน</span>
+    </div>
+    <div class="unit">
+        <span class="value">{{ time.hours }}</span>
+        <span class="label">ชั่วโมง</span>
+    </div>
+    <div class="unit">
+        <span class="value">{{ time.minutes }}</span>
+        <span class="label">นาที</span>
+    </div>
+    <div class="unit">
+        <span class="value">{{ time.seconds }}</span>
+        <span class="label">วินาที</span>
+    </div>
+    }
+</div>

@@ -1,0 +1,14 @@
+<h2>FAQ</h2>
+<p>คำถามยอดฮิตที่เพื่อนๆ ถามกันบ่อย ลองเช็กตรงนี้ได้เลย</p>
+
+<div class="faq-list">
+    @for (item of faqs; track item.id) {
+    <button type="button" class="faq-item" (click)="toggle(item.id)" [class.is-open]="openId() === item.id">
+        <span class="question">{{ item.question }}</span>
+        <span class="icon">{{ openId() === item.id ? '−' : '+' }}</span>
+    </button>
+    @if (openId() === item.id) {
+    <div class="answer">{{ item.answer }}</div>
+    }
+    }
+</div>

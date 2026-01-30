@@ -1,0 +1,61 @@
+.rsvp-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(77, 59, 47, 0.2);
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.radio-group {
+  display: grid;
+  gap: 0.6rem;
+  background: rgba(255, 246, 239, 0.7);
+  padding: 0.8rem;
+  border-radius: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  background: #f7b6b0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0;
+  font-weight: 500;
+}
+
+.status.success {
+  color: #2f8f6b;
+}
+
+.status.error {
+  color: #c0392b;
+}
+
+.total {
+  font-size: 0.85rem;
+  color: rgba(77, 59, 47, 0.7);
+  margin-top: 0.5rem;
+}

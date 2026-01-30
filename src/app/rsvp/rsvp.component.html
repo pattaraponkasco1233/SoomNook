@@ -1,0 +1,52 @@
+<h2>RSVP</h2>
+<p>ช่วยกรอกข้อมูลสั้นๆ เพื่อเตรียมที่นั่งให้พอดีที่สุดนะ</p>
+
+<form [formGroup]="form" (ngSubmit)="submit()" class="rsvp-form">
+    <label>
+        ชื่อเล่น
+        <input type="text" formControlName="name" placeholder="เช่น แพร" />
+    </label>
+
+    <label>
+        เบอร์โทร
+        <input type="tel" formControlName="phone" placeholder="xxx-xxx-xxxx" />
+    </label>
+
+    <label>
+        จำนวนคน
+        <input type="number" formControlName="guests" min="1" max="5" />
+    </label>
+
+    <div class="radio-group" role="radiogroup" aria-label="การเข้าร่วม">
+        <label>
+            <input type="radio" formControlName="attendance" value="yes" />
+            มาแน่นอน
+        </label>
+        <label>
+            <input type="radio" formControlName="attendance" value="maybe" />
+            ขอเช็กคิวก่อน
+        </label>
+        <label>
+            <input type="radio" formControlName="attendance" value="no" />
+            ติดงาน ไม่สะดวก
+        </label>
+    </div>
+
+    <label>
+        ฝากข้อความถึงคู่บ่าวสาว
+        <textarea rows="3" formControlName="message" placeholder="ส่งกำลังใจน่ารักๆ"></textarea>
+    </label>
+
+    <button type="submit" [disabled]="form.invalid || status() === 'saving'">
+        {{ status() === 'saving' ? 'กำลังส่ง...' : 'ส่ง RSVP' }}
+    </button>
+
+    @if (status() === 'success') {
+    <p class="status success">ขอบคุณมาก! เราได้รับข้อมูลแล้ว 💛</p>
+    }
+    @if (status() === 'error') {
+    <p class="status error">ส่งไม่สำเร็จ ลองใหม่อีกครั้งนะ</p>
+    }
+
+    <p class="total">มีเพื่อนๆ ตอบรับแล้ว {{ totalRsvps() }} คน</p>
+</form>

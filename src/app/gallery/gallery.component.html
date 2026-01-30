@@ -1,0 +1,11 @@
+<h2>Gallery Moments</h2>
+<p>รูปภาพเล็กๆ จากทุกช่วงเวลาที่ทำให้เราอยากฉลองกับทุกคน</p>
+
+<div class="gallery-grid">
+    @for (item of items; track item.src) {
+    <figure>
+        <img [ngSrc]="item.src" width="640" height="480" [alt]="item.alt" />
+        <figcaption>{{ item.alt }}</figcaption>
+    </figure>
+    }
+</div>

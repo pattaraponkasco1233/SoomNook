@@ -1,0 +1,4 @@
+<button type="button" class="toggle" (click)="toggle()">
+    <span class="dot" [class.is-on]="isPlaying()"></span>
+    <span>{{ isPlaying() ? 'ปิดเพลงพื้นหลัง' : 'เปิดเพลงพื้นหลัง' }}</span>
+</button>
